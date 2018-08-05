@@ -10,6 +10,24 @@ For further learning go to Python Learning Sources.
   - Why Python over Excel?
   - Python installation.
   - Simple calculations.
-- Python data types and operands
-  - Data types.
-  - Operands.
+- Python data types and operators
+  - Basic data types: numbers, strings, lists, tuples, dictionaries.
+  - Operators.
+  - Working with different data types.
+- Control flow statements
+  - Control flow tools: if, for, while, continue, break, pass.
+- Functions
+  - Defining functions.
+  - Function arguments.
+  - Lambda expressions.
+- Methods
+  - Methods vs functions.
+  - Useful methods.
+- Modules in Python
+  - What are modules?
+  - Useful modules.
+- Pandas
+  - Pandas data structures: Series and DataFrame.
+  - Viewing and selecting data.
+  - Setting values.
+  
