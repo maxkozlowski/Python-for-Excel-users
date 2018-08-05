@@ -30,4 +30,9 @@ For further learning go to Python Learning Sources.
   - Pandas data structures: Series and DataFrame.
   - Viewing and selecting data.
   - Setting values.
-  
+  - Working with data - basic operations.
+  - Importing and exporting Excel files.
+  - Aggregating and merging DataFrames.
+- Tidy data.
+  - Principles of tidy data.
+- Excel functions demonstraded in Python.
