@@ -33,6 +33,6 @@ For further learning go to Python Learning Sources.
   - Working with data - basic operations.
   - Importing and exporting Excel files.
   - Aggregating and merging DataFrames.
-- Tidy data.
+- Tidy data
   - Principles of tidy data.
 - Excel functions demonstraded in Python.
