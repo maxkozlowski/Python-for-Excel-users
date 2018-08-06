@@ -10,8 +10,8 @@ For further learning go to Python Learning Sources.
   - Why Python over Excel?
   - Python installation.
   - Simple calculations.
-- Python data types and operators
-  - Basic data types: numbers, strings, lists, tuples, dictionaries.
+- Data types and operators
+  - Basic data types.
   - Operators.
   - Working with different data types.
 - Control flow statements
