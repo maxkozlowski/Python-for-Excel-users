@@ -18,3 +18,16 @@ Python has 7 basic data types: integers, floats, booleans, strings, lists, tuple
 
 ## Operators
 
+Python features a range of operators. They can be split into arithmetic operators, comparison operators, logical operators, assignment operators and bitwise operators.
+
+#### Arithmetic operators
+
+| Operator  | Example | Description |
+| ------------- | ------------- | ------------- |
+| +  | 3 + 2 (outcome: 5) | addition |
+| -  | 3 - 1 (outcome: 2) | subtraction |
+| *  | 3 * 2 (outcome: 6) | multiplication |
+| /  | 9 / 3 (outcome: 3) | division |
+| **  | 2 ** 3 (outcome: 8) | power calculation |
+| //  | 9 // 2 (outcome: 4) | floor division |
+| %  | 9 % 2 (outcome: 1) | modulus |
