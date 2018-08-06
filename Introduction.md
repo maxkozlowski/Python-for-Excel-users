@@ -20,3 +20,27 @@ While Excel has its obvious advantages (especially easy viewing and visualising)
   - There is only so many data processes you do. Sharing ideas and collaborating on code development with other people will mean that over time, writing new data processes in Python will eventually become very quick and easy.
 
 ## Python installation
+The easiest and fastest way to get Python installed is [Anaconda distribution](https://www.anaconda.com/download/).
+Simply go to the website and download Python 3.6.
+Having installed that, you will be able to use either [Spyder](https://en.wikipedia.org/wiki/Spyder_(software)) or [Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter). In this course we will mainly work with Jupyter.
+
+## Simple calculations
+Now you can go to Jupyter and start working with Python. As the starting point, try a few calculations.
+Just type in the below formulas and press Shift + Enter to run.
+```math #yourmathlabel
+4 + 5
+```
+```math #yourmathlabel
+8 - 11
+```
+```math #yourmathlabel
+2 * 2
+```
+```math #yourmathlabel
+5 / 3
+```
+```math #yourmathlabel
+x = 4.26
+y = 10 * 4.26
+y * x
+```
