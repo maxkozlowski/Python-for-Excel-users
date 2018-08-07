@@ -139,7 +139,7 @@ You can represent the table above in a dictionary.
 new_dictionary = {'Kane':6, 'Griezmann':4, 'Lukaku':4, 'Cheryshev':4, 'Mbappe':4}
 ```
 
-You cen extract the number of goals scored by each player just by calling his name (the key in this dictionary).
+You can extract the number of goals scored by each player just by calling his name (the key in this dictionary).
 
 ```python
 new_dictionary['Kane']
