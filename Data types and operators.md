@@ -57,7 +57,7 @@ You will have seen operators in Excel already. When doing calculations in Excel,
 
 While working with numbers and strings in Python for an Excel user is rather intuitive, lists, tuples and dictionaries do not have a direct analogy in Excel. 
 
-#### Lists
+#### List
 
 Lists store arrays of data written within square brackets []. In order to create a new list, simply type in a few numbers delimited by commas and wrap it in square brackets.
 
@@ -69,7 +69,7 @@ new_list = [5,10,15,20,25]
            -5 -4 -3 -2 -1
 ```
 
-To get an element from the list you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
+To get an element from a list, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
 
 ```python
 new_list[3]
@@ -78,7 +78,7 @@ new_list[0,4]
 new_list[-5,-1]
 ```
 
-Another way of pulling out values from list is slicing. Type in the name, and in square brackets the first and the range of observations you want to pull out. Note that Python will return all the values in between the indexes you passed, including the first observation but excluding the last one.
+Another way of pulling out values from lists is slicing. Type in the name, and in square brackets the first and the range of observations you want to pull out. Note that Python will return all the values in between the indexes you passed, including the first observation but excluding the last one.
 
 ```python
 new_list[0:3]
@@ -87,4 +87,61 @@ new_list[2:]
 new_list[2:]
 new_list[:-1]
 new_list[:]
+```
+
+#### Tuple
+
+Tuples are quite similar to lists and store arrays of data written within brackets (). In order to create a new list, simply type in a few numbers delimited by commas and wrap it in square brackets. The main difference is that tuples, unlike lists, are immutable i.e. once created you cannot change its values.
+
+Tuple elements are easy to access thanks to indexes (either starting from left or right). The first value on the left has index 0 and the first value on the right has index -1.
+
+```python
+new_tuple = (5,10,15,20,25)
+            0  1  2  3  4
+           -5 -4 -3 -2 -1
+```
+
+To get an element from a tuple, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
+
+```python
+new_tuple[3]
+new_tuple[-2]
+new_tuple[0,4]
+new_tuple[-5,-1]
+```
+
+Another way of pulling out values from tuples is slicing. Type in the name, and in square brackets the first and the range of observations you want to pull out. Note that Python will return all the values in between the indexes you passed, including the first observation but excluding the last one.
+
+```python
+new_tuple[0:3]
+new_tuple[1:5]
+new_tuple[2:]
+new_tuple[2:]
+new_tuple[:-1]
+new_tuple[:]
+```
+
+#### Dictionary
+
+Dictionary is a set of key:value pairs. It is very useful for storing pairs of values and extracting values by providing its key. It can be very often used to perform tasks analogical to vlookup or index/match in Excel.
+
+| Name (Key)  | World Cup Goals (Value)  |
+| ------------- | ------------- |
+| 'Kane' | 6 |
+| 'Griezmann' | 4 |
+| 'Lukaku' | 4 |
+| 'Cheryshev' | 4 |
+| 'Mbappe' | 4 |
+
+You can represent the table above in a dictionary.
+
+```python
+new_dictionary = {'Kane':6, 'Griezmann':4, 'Lukaku':4, 'Cheryshev':4, 'Mbappe':4}
+```
+
+You cen extract the number of goals scored by each player just by calling his name (the key in this dictionary).
+
+```python
+new_dictionary['Kane']
+new_dictionary['Lukaku']
 ```
