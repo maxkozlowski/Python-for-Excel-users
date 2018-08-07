@@ -20,6 +20,8 @@ Python has 7 basic data types: integers, floats, booleans, strings, lists, tuple
 
 Python features a range of operators. They can be split into arithmetic, assignment, comparison, logical, identity, membership and bitwise operators.
 
+You will have seen operators in Excel already. When doing calculations in Excel, you surely employed operators such as +, -, * and /. If you have some experience with VBA you will be familiar with assignment and comparison operators too. 
+
 | Category  | Operator  | Example | Description |
 | ------------- | ------------- | ------------- | ------------- |
 | arithmetic  | +  | 3 + 2 (outcome: 5) | addition |
@@ -50,3 +52,39 @@ Python features a range of operators. They can be split into arithmetic, assignm
 | identity  | is not  | x is not y | check if the variables are different objects |
 | membership  | in  | x in y | check if the variable can be found in the specified sequence |
 | membership  | not in  | x not in y | check if the variable can not be found in the specified sequence |
+
+## Working with non-numeric data types
+
+While working with numbers and strings in Python for an Excel user is rather intuitive, lists, tuples and dictionaries do not have a direct analogy in Excel. 
+
+#### Lists
+
+Lists store arrays of data written within square brackets []. In order to create a new list, simply type in a few numbers delimited by commas and wrap it in square brackets.
+
+Lists elements are easy to access thanks to indexes (either starting from left or right). The first value on the left has index 0 and the first value on the right has index -1.
+
+```python
+new_list = [5,10,15,20,25]
+            0  1  2  3  4
+           -5 -4 -3 -2 -1
+```
+
+To get an element from the list you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
+
+```python
+new_list[3]
+new_list[-2]
+new_list[0,4]
+new_list[-5,-1]
+```
+
+Another way of pulling out values from list is slicing. Type in the name, and in square brackets the first and the range of observations you want to pull out. Note that Python will return all the values in between the indexes you passed, including the first observation but excluding the last one.
+
+```python
+new_list[0:3]
+new_list[1:5]
+new_list[2:]
+new_list[2:]
+new_list[:-1]
+new_list[:]
+```
