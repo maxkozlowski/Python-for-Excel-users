@@ -72,6 +72,34 @@ this_year()
 
 ## Function arguments
 
-Text
+Most often you will want to input some values to get processed by the function. Just like in Excel, you typically want to calculate some results based on arguments provided. To create a function that takes arguments, just type in the arguments in brackets and separate them by commas.
+
+```python
+# Functions with arguments
+
+# Sum 2 arguments
+def sum_2_arguments(a,b):
+  return a+b
+  
+
+# Check if the number is even
+def is_even(a):
+  return a%2
+```
+
+Additionally, you can use * args or ** kwargs in your function definition. Using * args is useful when you are not sure how many arguments might be passed to your function. Using * kwargs allows you to handle named arguments that you have not defined in advance.
+
+```python
+# Sum all numbers
+def sum_all_arguments(*args):
+  x = 0
+  for i in args:
+    x+=i
+  return x
+  
+# Print kwargs
+def print_kwargs(**kwargs):
+        print(kwargs)
+```
 
 ## Lambda expressions
