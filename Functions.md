@@ -84,7 +84,7 @@ def sum_2_arguments(a,b):
 
 # Check if the number is even
 def is_even(a):
-  return a%2
+  return bool(a%2)
 ```
 
 Additionally, you can use * args or ** kwargs in your function definition. Using * args is useful when you are not sure how many arguments might be passed to your function. Using * kwargs allows you to handle named arguments that you have not defined in advance.
@@ -99,7 +99,20 @@ def sum_all_arguments(*args):
   
 # Print kwargs
 def print_kwargs(**kwargs):
-        print(kwargs)
+  print(kwargs)
 ```
 
 ## Lambda expressions
+
+When writing short and quick functions you may want to use lambda expression. The only thing it does is that it enables you to write a function in a more concise way.
+
+```python
+# Check if the number is even
+def is_even(a):
+  return bool(a%2)
+  
+# Check if the number is even - the same function as the one above but expressed with lambda
+lambda a: a%2
+# You can also assigna name to the function so that you can call it and check if it returns the same values
+is_even_lambda = lambda a: bool(a%2)
+```
