@@ -65,8 +65,8 @@ Lists elements are easy to access thanks to indexes (either starting from left o
 
 ```python
 new_list = [5,10,15,20,25]
-            0  1  2  3  4
-           -5 -4 -3 -2 -1
+#           0  1  2  3  4
+#          -5 -4 -3 -2 -1
 ```
 
 To get an element from a list, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
@@ -97,8 +97,8 @@ Tuple elements are easy to access thanks to indexes (either starting from left o
 
 ```python
 new_tuple = (5,10,15,20,25)
-            0  1  2  3  4
-           -5 -4 -3 -2 -1
+#            0  1  2  3  4
+#           -5 -4 -3 -2 -1
 ```
 
 To get an element from a tuple, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
@@ -144,4 +144,49 @@ You can extract the number of goals scored by each player just by calling his na
 ```python
 new_dictionary['Kane']
 new_dictionary['Lukaku']
+```
+
+
+## Exercises
+
+```python
+# 1) Create a variable 'height' and assign your height (in feet).
+
+# 2) Create a new variable 'height_m' that will be a function of 'height' that transforms feet into meters. There are 3.28 feet in a meter.
+
+# 3) Create a variable 'birth_year'.
+
+# 4) Create a variable 'age'. Assign 2018 minus 'birth_year' to it.
+
+# 5) Subtract 5 years from the 'age' variable. Try using only the number 5 on the right hand side.
+
+# 6) Check if your age 5 years ago was even.
+
+# 7) Create another variable that contains age of one of your friends or siblings. Compare if this variable is bigger or equal to the variable 'age'.
+
+# 8) Create a list that contains one integer, one float, one string and a bollean. A single list can contain different data types. Name it 'new_list'.
+
+# 9) Get the first element from the list.
+
+# 10) Get the last element from the list.
+
+# 11) Get the first 2 elements from the list.
+
+# 12) Get the last 2 elements from the list.
+
+# 13) Create a tuple that contains one integer, one float, one string and a bollean. A single tuple can contain different data types. Name it 'new_tuple'.
+
+# 14) Get the first element from the tuple.
+
+# 15) Get the last element from the tuple.
+
+# 16) Get the first 2 elements from the tuple.
+
+# 17) Get the last 2 elements from the tuple.
+
+# 18) Assign a new number into the first element of your list. Could this be done with the tuple?
+
+# 19) Create a dictionary with at least 3 pairs of fruits and their colours.
+
+# 20) Get the colour of one of the fruits you used.
 ```
