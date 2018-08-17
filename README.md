@@ -20,19 +20,19 @@ For further learning go to Python Learning Sources.
   - Defining functions.
   - Function arguments.
   - Lambda expressions.
-- Methods
+- [Methods](./Methods.md)
   - Methods vs functions.
   - Useful methods.
-- Modules in Python
+- [Modules in Python](./Modules_in_Python.md)
   - What are modules?
   - Useful modules.
-- Pandas
+- [Pandas](./Pandas.md)
   - Pandas data structures: Series and DataFrame.
   - Viewing and selecting data.
   - Setting values.
   - Working with data - basic operations.
   - Importing and exporting Excel files.
   - Aggregating and merging DataFrames.
-- Tidy data
+- [Tidy data](./Tidy_data.md)
   - Principles of tidy data.
-- Excel functions demonstraded in Python
+- [Excel functions demonstraded in Python](./Excel_functions_demonstrated_in_Python.md)
