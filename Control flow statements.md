@@ -126,21 +126,15 @@ for i in [1,2,3,4,5,6,7,8]:
 
 # 6) The longest word in english is 'pneumonoultramicroscopicsilicovolcanoconiosis'. Try to calculate how long is this word. Use the for loop that iterates over the string. Create a predefined variable i=0, that will get incremented by 1 every iteration.
 
-# 7) Iterate over a range 0 to 20. Print out each element.
+# 7) Iterate over a range 0 to 20 using for and range. Print out each element.
 
-# 8)
+# 8) Iterate over a range 0 to 20 using while. Print out each element.
 
-# 9)
+# 9) Iterate over a list 1 to 20 and print only uneven numbers.
 
-# 10)
+# 10) Iterate over a range 1 to 20 and print only uneven numbers.
 
-# 11)
+# 11) Iterate over a range 1 to 20 and print only numbers that are divisible by 3.
 
-# 12)
-
-# 13)
-
-# 14)
-
-# 15)
+# 12) Iterate over a range 1 to 40 and print every number. Terminate the loop when the number is larger than 30.
 ```
