@@ -5,18 +5,18 @@ For further learning go to Python Learning Sources.
 
 # Chapters
 
-- Introduction
+- [Introduction](./Introduction.md)
   - What is Python?
   - Why Python over Excel?
   - Python installation.
   - Simple calculations.
-- Data types and operators
+- [Data types and operators](./Data types and operators.md)
   - Basic data types.
   - Operators.
   - Working with different data types.
-- Control flow statements
+- [Control flow statements](./Control flow statements.md)
   - Control flow tools: if, for, while, continue, break, pass.
-- Functions
+- [Functions](./Functions.md)
   - Defining functions.
   - Function arguments.
   - Lambda expressions.
