@@ -35,4 +35,4 @@ For further learning go to Python Learning Sources.
   - Aggregating and merging DataFrames.
 - Tidy data
   - Principles of tidy data.
-- Excel functions demonstraded in Python.
+- Excel functions demonstraded in Python
