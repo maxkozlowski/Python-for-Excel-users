@@ -10,11 +10,11 @@ For further learning go to Python Learning Sources.
   - Why Python over Excel?
   - Python installation.
   - Simple calculations.
-- [Data types and operators](./Data types and operators.md)
+- [Data types and operators](./Data_types_and_operators.md)
   - Basic data types.
   - Operators.
   - Working with different data types.
-- [Control flow statements](./Control flow statements.md)
+- [Control flow statements](./Control_flow_statements.md)
   - Control flow tools: if, for, while, continue, break, pass.
 - [Functions](./Functions.md)
   - Defining functions.
