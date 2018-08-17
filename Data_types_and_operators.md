@@ -69,13 +69,11 @@ new_list = [5,10,15,20,25]
 #          -5 -4 -3 -2 -1
 ```
 
-To get an element from a list, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
+To get an element from a list, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets.
 
 ```python
 new_list[3]
 new_list[-2]
-new_list[0,4]
-new_list[-5,-1]
 ```
 
 Another way of pulling out values from lists is slicing. Type in the name, and in square brackets the first and the range of observations you want to pull out. Note that Python will return all the values in between the indexes you passed, including the first observation but excluding the last one.
