@@ -31,7 +31,7 @@ You will have seen operators in Excel already. When doing calculations in Excel,
 | arithmetic  | **  | 2 ** 3 (outcome: 8) | power calculation |
 | arithmetic  | //  | 9 // 2 (outcome: 4) | floor division |
 | arithmetic  | %  | 9 % 2 (outcome: 1) | modulus |
-| arithmetic  | =  | x = 10 | x = 10 |
+| assignment  | =  | x = 10 | x = 10 |
 | assignment  | +=  | x += 10 | x = x + 10 |
 | assignment  | -=  | x-=10 | x = x - 10 |
 | assignment  | * =  | x * = 10 | x = x * 10 |
@@ -65,8 +65,8 @@ Lists elements are easy to access thanks to indexes (either starting from left o
 
 ```python
 new_list = [5,10,15,20,25]
-#           0  1  2  3  4
-#          -5 -4 -3 -2 -1
+# index:    0  1  2  3  4
+# index:   -5 -4 -3 -2 -1
 ```
 
 To get an element from a list, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets.
@@ -95,17 +95,15 @@ Tuple elements are easy to access thanks to indexes (either starting from left o
 
 ```python
 new_tuple = (5,10,15,20,25)
-#            0  1  2  3  4
-#           -5 -4 -3 -2 -1
+# index:     0  1  2  3  4
+# index:    -5 -4 -3 -2 -1
 ```
 
-To get an element from a tuple, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets. You can type multiple indexes.
+To get an element from a tuple, you can simply type the name of the list and the index of the value you are after, wrapped in square brackets.
 
 ```python
 new_tuple[3]
 new_tuple[-2]
-new_tuple[0,4]
-new_tuple[-5,-1]
 ```
 
 Another way of pulling out values from tuples is slicing. Type in the name, and in square brackets the first and the range of observations you want to pull out. Note that Python will return all the values in between the indexes you passed, including the first observation but excluding the last one.
@@ -147,44 +145,244 @@ new_dictionary['Lukaku']
 
 ## Exercises
 
+1) Create a variable 'height' and assign your height (in feet).
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
 ```python
-# 1) Create a variable 'height' and assign your height (in feet).
-
-# 2) Create a new variable 'height_m' that will be a function of 'height' that transforms feet into meters. There are 3.28 feet in a meter.
-
-# 3) Create a variable 'birth_year'.
-
-# 4) Create a variable 'age'. Assign 2018 minus 'birth_year' to it.
-
-# 5) Subtract 5 years from the 'age' variable. Try using only the number 5 on the right hand side.
-
-# 6) Check if your age 5 years ago was even.
-
-# 7) Create another variable that contains age of one of your friends or siblings. Compare if this variable is bigger or equal to the variable 'age'.
-
-# 8) Create a list that contains one integer, one float, one string and a bollean. A single list can contain different data types. Name it 'new_list'.
-
-# 9) Get the first element from the list.
-
-# 10) Get the last element from the list.
-
-# 11) Get the first 2 elements from the list.
-
-# 12) Get the last 2 elements from the list.
-
-# 13) Create a tuple that contains one integer, one float, one string and a bollean. A single tuple can contain different data types. Name it 'new_tuple'.
-
-# 14) Get the first element from the tuple.
-
-# 15) Get the last element from the tuple.
-
-# 16) Get the first 2 elements from the tuple.
-
-# 17) Get the last 2 elements from the tuple.
-
-# 18) Assign a new number into the first element of your list. Could this be done with the tuple?
-
-# 19) Create a dictionary with at least 3 pairs of fruits and their colours.
-
-# 20) Get the colour of one of the fruits you used.
+height = 6.1
 ```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+2) Create a new variable 'height_m' that will be a function of 'height' that transforms feet into meters. There are 3.28 feet in a meter.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+height_m = height/3.28
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+3) Create a variable 'birth_year'.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+birth_year = 1991
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+4) Create a variable 'age'. Assign 2018 minus 'birth_year' to it.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+age = 2018 - birth_year
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+5) Subtract 5 years from the 'age' variable. Try using only the number 5 on the right hand side.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+age -=5
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+6) Check if your age 5 years ago was even.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+age%2 == 0
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+7) Create another variable that contains age of one of your friends or siblings. Compare if this variable is bigger or equal to the variable 'age' (you can add back the 5 years you subtracted earlier).
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+age_sibling = 29
+age += 5
+age_sibling >= age
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+8) Create a list that contains one integer, one float, one string and a bollean. A single list can contain different data types. Name it 'new_list'.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+new_list = [5, 7.13, 'Erika', True]
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+9) Get the first element from the list.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+new_list[0]
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+10) Get the last element from the list.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+new_list[-1]
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+11) Get the first 2 elements from the list.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+12) Get the last 2 elements from the list.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+13) Create a tuple that contains one integer, one float, one string and a bollean. A single tuple can contain different data types. Name it 'new_tuple'.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+14) Get the first element from the tuple.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+15) Get the last element from the tuple.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+16) Get the first 2 elements from the tuple.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+17) Get the last 2 elements from the tuple.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+18) Assign a new number into the first element of your list. Could this be done with the tuple?
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+19) Create a dictionary with at least 3 pairs of fruits and their colours.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+20) Get the colour of one of the fruits you used.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
