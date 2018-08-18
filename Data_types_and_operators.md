@@ -272,7 +272,7 @@ new_list[-1]
 <p>
 
 ```python
-code
+new_list[:2]
 ```
 
 </p>
@@ -284,7 +284,7 @@ code
 <p>
 
 ```python
-code
+new_list = [-2:]
 ```
 
 </p>
@@ -296,7 +296,7 @@ code
 <p>
 
 ```python
-code
+new_tuple = (5, 7.13, 'Erika', True)
 ```
 
 </p>
@@ -308,7 +308,7 @@ code
 <p>
 
 ```python
-code
+new_tuple[0]
 ```
 
 </p>
@@ -320,7 +320,7 @@ code
 <p>
 
 ```python
-code
+new_tuple[-1]
 ```
 
 </p>
@@ -332,7 +332,7 @@ code
 <p>
 
 ```python
-code
+new_tuple[:2]
 ```
 
 </p>
@@ -344,7 +344,7 @@ code
 <p>
 
 ```python
-code
+new_tuple[-2:]
 ```
 
 </p>
@@ -356,7 +356,7 @@ code
 <p>
 
 ```python
-code
+new_list[0] = 150
 ```
 
 </p>
@@ -368,7 +368,7 @@ code
 <p>
 
 ```python
-code
+fruits_and_colours = {'banana':'yellow', 'apple':'red', 'plumb':'purple'}
 ```
 
 </p>
@@ -380,7 +380,7 @@ code
 <p>
 
 ```python
-code
+fruits_and_colours['apple']
 ```
 
 </p>
