@@ -113,28 +113,175 @@ for i in [1,2,3,4,5,6,7,8]:
 
 ## Exercises
 
+1) Create some numeric variable and write an if statement that divides the variable by 3 if it's larger than 10.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
 ```python
-# 1) Create some numeric variable and write an if statement that, returns this number divided by 3 if it's larger than 10.
+x = 15
 
-# 2) Create an if statement that takes 2 predefined variables: 'my_age' and 'my_friends_age'. Depending on the result it will print 'I am older', 'My friend is older' or 'We are the same age'.
-
-# 3) Imagine that you are testing a hypothesis and you are using two-tailed test. Create a variable 'test_statistic' and assign a number to it. Write an if statement that prints 'Hypothesis rejected with 5% significance level' if the variable is more than 1.96 or less than -1.96. Then, if it's not the case but your variable is larger or smaller than 1.645 (-1.645), print out 'Hypothesis rejected with 10% significance level'. In all other cases print out 'Hypothesis not rejected'.
-
-# 4) Create a list that contains at least 5 elements. Print out their elements using for loop.
-
-# 5) Create a ist that contains only numeric data types (5 elements or more). Iterate over the list and multiply each item by 2.
-
-# 6) The longest word in english is 'pneumonoultramicroscopicsilicovolcanoconiosis'. Try to calculate how long is this word. Use the for loop that iterates over the string. Create a predefined variable i=0, that will get incremented by 1 every iteration.
-
-# 7) Iterate over a range 0 to 20 using for and range. Print out each element.
-
-# 8) Iterate over a range 0 to 20 using while. Print out each element.
-
-# 9) Iterate over a list 1 to 20 and print only uneven numbers.
-
-# 10) Iterate over a range 1 to 20 and print only uneven numbers.
-
-# 11) Iterate over a range 1 to 20 and print only numbers that are divisible by 3.
-
-# 12) Iterate over a range 1 to 40 and print every number. Terminate the loop when the number is larger than 30.
+if x > 10:
+    x = x/3
 ```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+2) Create an if statement that takes 2 predefined variables: 'my_age' and 'my_friends_age'. Depending on the result it will print 'I am older', 'My friend is older' or 'We are the same age'.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+my_age = 27
+my_friends_age = 28
+
+if my_age > my_friends_age:
+    print("I'm older")
+elif my_age == my_friends_age:
+    print('We are the same age')
+else:
+    print('My friend is older')
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+3) Imagine that you are testing a hypothesis and you are using two-tailed test. Create a variable 'test_statistic' and assign some number to it. Write an if statement that prints 'Hypothesis rejected with 5% significance level' if the variable is more than 1.96 or less than -1.96. Then, if it's not the case but your variable is larger or smaller than 1.645 (-1.645), print out 'Hypothesis rejected with 10% significance level'. In all other cases print out 'Hypothesis not rejected'.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+test_statistic = -1.7
+
+if test_statistic > 1.96 or test_statistic < -1.96:
+    print('Hypothesis rejected with 5% significance level')
+elif test_statistic > 1.645 or test_statistic < -1.645:
+    print('Hypothesis rejected with 10% significance level')
+else:
+    print('Hypothesis not rejected')
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+4) Create a list that contains at least 5 elements. Print out their elements using for loop.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+random_elements = [5, 4.5, True, 'Text', 6.1, 3.3]
+
+for element in random_elements:
+    print(element)
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+5) Create a list that contains only numeric data types (5 elements or more). Iterate over the list and print each item multiplied by 2.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+competition_scores = [10.5, 11.1, 9.6, 11.2, 10.2, 12.4, 8.6, 9.0]
+
+for score in competition_scores:
+    print(score*2)
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+6) The longest word in english is 'pneumonoultramicroscopicsilicovolcanoconiosis'. Try to calculate how long is this word. Use the for loop that iterates over the string. Create a predefined variable i=0, that will get incremented by 1 every iteration.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+i = 0
+longest_word = 'pneumonoultramicroscopicsilicovolcanoconiosis'
+
+for character in longest_word:
+    i+=1
+print(i)
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+7) Iterate over a range 0 to 20 using for and range. Print out each element.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+8) Iterate over a range 0 to 20 using while. Print out each element.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+9) Iterate over a list 1 to 20 and print only uneven numbers.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+10) Iterate over a range 1 to 20 and print only uneven numbers.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+11) Iterate over a range 1 to 20 and print only numbers that are divisible by 3.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+12) Iterate over a range 1 to 40 and print every number. Terminate the loop when the number is larger than 30.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
