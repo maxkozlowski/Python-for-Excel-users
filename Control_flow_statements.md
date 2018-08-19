@@ -219,7 +219,8 @@ print(i)
 <p>
 
 ```python
-code
+for i in range(21):
+    print(i)
 ```
 
 </p>
@@ -231,55 +232,74 @@ code
 <p>
 
 ```python
-code
+i = 0
+while i <= 20:
+    print(i)
+    i+=1
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-9) Iterate over a list 1 to 20 and print only uneven numbers.
+9) Iterate over a range 0 to 20 and print only uneven numbers.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+for i in range(21):
+    if i%2 != 0:
+        print(i)
+    else:
+        continue
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-10) Iterate over a range 1 to 20 and print only uneven numbers.
+10) Iterate over a range 0 to 20 and print only even numbers.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+for i in range(21):
+    if i%2 == 0:
+        print(i)
+    else:
+        continue
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-11) Iterate over a range 1 to 20 and print only numbers that are divisible by 3.
+11) Iterate over a range 0 to 20 and print only numbers that are divisible by 3.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+for i in range(21):
+    if i%3 == 0:
+        print(i)
+    else:
+        continue
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-12) Iterate over a range 1 to 40 and print every number. Terminate the loop when the number is larger than 30.
+12) Iterate over a range 0 to 40 and print every number. Terminate the loop when the number is larger than 30.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+for i in range(41):
+    if i>30:
+        break
+    else:
+        print(i)
 ```
 
 </p>
