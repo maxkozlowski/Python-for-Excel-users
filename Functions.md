@@ -6,43 +6,63 @@ Do you rember print() and range() we used in the previous chapters? These are Py
 
 Python ducomantation provides you with a list of built in functions. You are likely to work with some functions more often than with the others. There are a few commonly used Python functions.
 
-- len()
+```python
+len()
+```
 
 Return the length (the number of items) of an object. The argument may be a sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set).
 
-- print()
+```python
+print()
+```
 
 Print objects to the text stream file, separated by sep and followed by end. sep, end, file and flush, if present, must be given as keyword arguments.
 
-- abs()
+```python
+abs()
+```
 
 Return the absolute value of a number. The argument may be an integer or a floating point number. If the argument is a complex number, its magnitude is returned.
 
-- min()
+```python
+min()
+```
 
 Return the smallest item in an iterable or the smallest of two or more arguments.
 
-- max()
+```python
+max()
+```
 
 Return the largest item in an iterable or the largest of two or more arguments.
 
-- round()
+```python
+round()
+```
 
 Return number rounded to ndigits precision after the decimal point. If ndigits is omitted or is None, it returns the nearest integer to its input.
 
-- type()
+```python
+type()
+```
 
 With one argument, return the type of an object
 
-- str()
+```python
+str()
+```
 
 Return a string version of object.
 
-- int()
+```python
+int()
+```
 
 Return an integer object constructed from a number or string x, or return 0 if no arguments are given.
 
-- float()
+```python
+float()
+```
 
 Return a floating point number constructed from a number or string x.
 
@@ -116,3 +136,246 @@ lambda a: a%2
 # You can also assigna name to the function so that you can call it and check if it returns the same values
 is_even_lambda = lambda a: bool(a%2)
 ```
+
+
+## Exercises
+
+1) Exercise 1
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+2) Exercise 2
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+3) Exercise 3
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+4) Exercise 4
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+5) Exercise 5
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+6) Exercise 6
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+7) Exercise 7
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+8) Exercise 8
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+9) Exercise 9
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+10) Exercise 10
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+11) Exercise 11
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+12) Exercise 12
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+13) Exercise 13
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+14) Exercise 14
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+15) Exercise 15
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+16) Exercise 16
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+17) Exercise 17
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+18) Exercise 18
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+19) Exercise 19
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
+
+20) Exercise 20
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+code
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
