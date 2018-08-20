@@ -107,6 +107,16 @@ def is_even(a):
   return bool(a%2)
 ```
 
+Some arguments in your function can be optional and can assume some default values for them. This is useful when you expect that most of the times users will want an argument to be equal to a certain number but you want to provide the flexibility to change it.
+
+```python
+# Functions with arguments
+
+# Return family size
+def family_size(kids, siblings, spouses=1, parents=2):
+    return sum([kids, siblings, spouses, parents])
+```
+
 Additionally, you can use * args or ** kwargs in your function definition. Using * args is useful when you are not sure how many arguments might be passed to your function. Using * kwargs allows you to handle named arguments that you have not defined in advance.
 
 ```python
@@ -140,72 +150,86 @@ is_even_lambda = lambda a: bool(a%2)
 
 ## Exercises
 
-1) Exercise 1
+1) Use len() to measure the length a string, a list a tuple and a dictionary.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+len('wall')
+len([1,2,3])
+len((1,2,3))
+len({'x':1, 'y':2})
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-2) Exercise 2
+2) Create a variable and assign a negative variable to it (it can be either float or int). Convert the variable into a positive number using abs().
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+x = -3
+x = abs(x)
+y = -5.14
+y = abs(y)
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-3) Exercise 3
+3) Get the minimum value of a string, a list, a tuple and a dictionary.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+min('wall')
+min([1,2,3,4,5])
+min((1,2,3,4,5))
+min({1:0.5, 2:1, 4:2, 8:4})
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-4) Exercise 4
+4) Get the maximum value of a string, a list, a tuple and a dictionary.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+max('wall')
+max([1,2,3,4,5])
+max((1,2,3,4,5))
+max({1:0.5, 2:1, 4:2, 8:4})
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-5) Exercise 5
+5) Create a float number and round it using the round() function.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+x = 3.1416
+x = round(x)
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-6) Exercise 6
+6) You can also tell Python how many decimal numbers you want to round your float to. It is a second argument in the round function, which is 0 by default. Create another float and round it to the second decimal number.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+x = 3.1416
+x = round(x, 2)
 ```
 
 </p>
