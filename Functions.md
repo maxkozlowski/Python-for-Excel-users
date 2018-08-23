@@ -66,6 +66,12 @@ float()
 
 Return a floating point number constructed from a number or string x.
 
+```python
+bool()
+```
+
+Return a Boolean value, i.e. one of True or False.
+
 ## Defining functions
 
 Just like in Excel, you can define custom functions. You will find it useful when you have to do a repetetive task that takes a few lines of code. It also makes your code more readable and organised if you wrap it into just one function.
@@ -236,168 +242,112 @@ x = round(x, 2)
 </details>
 <p>&nbsp;</p>
 
-7) Exercise 7
+7) Create 3 new variables of different types: integer, string and a dictionary. Check their types.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+x = 5
+type(x)
+
+y = 'Sky'
+type(y)
+
+z = {'a':1, 'b':2, 'c':3}
+type(z)
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-8) Exercise 8
+8) Use the integer you created in the previous exercise and transform it to a string. Could you do the same in case of a dictionary or list?
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+x = str(x)
+x
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-9) Exercise 9
+9) Convert the variable you used in the previous exercise back to numeric types. Create 2 variables: x_int and x_float. Do you think this transformation could be done with a string that contains non-numeric characters or with other data types?
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+x_int = int(x)
+x_float = float(x)
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-10) Exercise 10
+10) Define a function that will return your age.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+def return_age():
+  return 27
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-11) Exercise 11
+11) Define a function that will take year as an argument and return your age in the year provided.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+def return_age(year):
+  return year-1991
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-12) Exercise 12
+12) Define a function that will take year as an argument and return your age in the year provided. Use 2018 as the default argument.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+def return_age(year=2018):
+  return year-1991
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-13) Exercise 13
+13) Create a function that will take an unknown number of values (it can be 1 value or more) and return product of all numbers.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+def sum_all_arguments(*args):
+  x = 0
+  for i in args:
+    x*=i
+  return x
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-14) Exercise 14
+14) Replicate the function from the exercise 11 using lambda.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-15) Exercise 15
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-16) Exercise 16
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-17) Exercise 17
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-18) Exercise 18
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-19) Exercise 19
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-20) Exercise 20
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
+return_age_lambda = lambda year: year-1991
 ```
 
 </p>
