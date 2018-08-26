@@ -15,6 +15,7 @@ For further learning go to Python Learning Sources.
   - Operators.
   - Working with different data types.
 - [Control flow statements](./Control_flow_statements.md)
+  - Indentation.
   - Control flow tools: if, for, while, continue, break, pass.
 - [Functions](./Functions.md)
   - Defining functions.
