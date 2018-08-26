@@ -55,7 +55,26 @@ You will have seen operators in Excel already. When doing calculations in Excel,
 
 ## Working with non-numeric data types
 
-While working with numbers and strings in Python for an Excel user is rather intuitive, lists, tuples and dictionaries do not have a direct analogy in Excel. 
+While working with numbers in Python for an Excel user is rather intuitive, strings, lists, tuples and dictionaries do not have a direct analogy in Excel.
+
+#### Strings
+
+To declare a string you can use either sngle or double quotation marks. When within your text you have a single quotation mark, use double quotation to declare the string. When within your text you have a double quotation, use single quotation.
+
+```python
+# Declaring strings with either single or double quotations
+some_text = 'A string declared with single quotation'
+some_text2 = "A string declared with double quotation"
+
+# No matter if a single or double quotation has been used, Python reads it the same way
+abc = 'abc'
+abc2 = "abc"
+abc == abc2
+
+# If you have a double or single quotation in your text, use single or double quotation for declaring the string
+other_text = 'Use single quotation when you have double quotation (") inside the string'
+other_text2 = "Use double quotation when you have single quotation (') inside the string"
+```
 
 #### List
 
