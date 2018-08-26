@@ -2,7 +2,7 @@
 
 Control flow statements break up the flow of execution of code by employing decision making, looping, and branching, enabling your program to conditionally execute particular blocks of code.
 
-## indentation
+## Indentation
 
 Python uses indentation instead of braces to structure its programs and scripts into blocks. To indicate a block of code in Python, you must indent each line of the block by the same amount (typically four spaces). You will have to use indentation every time you use control flow statements, particularly if, else/elif, for and while. It is worth remembering that the control flow statements also use colons.
 
