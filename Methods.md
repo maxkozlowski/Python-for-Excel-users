@@ -59,57 +59,57 @@ Splits a string based on the substring provided and converts it to a list.
 object.endswith(sub)
 ```
 
-Description
+Checks if string ends with substring sub.
 
 ```python
 object.startswith(sub)
 ```
 
-Description
+Checks if string starts with substring sub.
 
 ```python
 object.find(sub)
 ```
 
-Description
+Returns the lowest index of the string where substring sub is found. If substring sub can not found -1 is returned.
 
 ```python
 object.rfind(sub)
 ```
 
-Description
+Returns the highest index of the string where substring sub is found. If substring sub can not found -1 is returned.
 
 ```python
 object.count(sub)
 ```
 
-Description
+Returns the number of occurrences of substring sub found in the string.
 
 #### Methods for Lists
 
 ```python
-object.append()
+object.append(x)
 ```
 
-Description
+Add an item x to the end of the list.
 
 ```python
-object.remove()
+object.remove(x)
 ```
 
-Description
+Remove the first item from the list whose value is equal to x.
 
 ```python
-object.count()
+object.count(x)
 ```
 
-Description
+Return the number of times x appears in the list.
 
 ```python
-object.clear()
+object.reverse()
 ```
 
-Description
+Reverse the elements of the list in place.
 
 #### Methods for Dictionaries
 
@@ -117,19 +117,13 @@ Description
 object.keys()
 ```
 
-Description
+Return a view of the dictionary’s keys.
 
 ```python
 object.values()
 ```
 
-Description
-
-```python
-object.clear()
-```
-
-Description
+Return a new view of the dictionary’s values.
 
 ## Exercises
 
