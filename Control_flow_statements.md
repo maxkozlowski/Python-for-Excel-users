@@ -1,5 +1,33 @@
 # Control flow statements
 
+Control flow statements break up the flow of execution of code by employing decision making, looping, and branching, enabling your program to conditionally execute particular blocks of code.
+
+## indentation
+
+Python uses indentation instead of braces to structure its programs and scripts into blocks. To indicate a block of code in Python, you must indent each line of the block by the same amount (typically four spaces). You will have to use indentation every time you use control flow statements, particularly if, else/elif, for and while. It is worth remembering that the control flow statements also use colons.
+
+```python
+# Pseudo-code example of how to use colons and indentation with control flow statements
+control_flow_statement_1:
+  block of code (it belongs to control_flow_statement_1)
+  block of code (it belongs to control_flow_statement_1)
+  block of code (it belongs to control_flow_statement_1)
+  control_flow_statement_2:
+    block of code (it belongs to control_flow_statement_2)
+    block of code (it belongs to control_flow_statement_2)
+    block of code (it belongs to control_flow_statement_2)
+    control_flow_statement_3:
+      block of code (it belongs to control_flow_statement_3)
+      block of code (it belongs to control_flow_statement_3)
+      block of code (it belongs to control_flow_statement_3)
+    block of code (it belongs to control_flow_statement_2)
+    block of code (it belongs to control_flow_statement_2)
+  block of code (it belongs to control_flow_statement_1)
+  block of code (it belongs to control_flow_statement_2)
+block of code (outside of and intependent from any control_flow_statement)
+block of code (outside of and intependent from any control_flow_statement)
+```
+
 ## if
 
 This statement is both self-explanatory and often used in Excel formulas. It simply checks whether or not the statement following if is True.
