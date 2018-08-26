@@ -20,43 +20,67 @@ Python has a range of useful built in methods. Because methods will work with sp
 #### Methods for Strings
 
 ```python
-lower()
+object.lower()
+```
+
+Converts characters to lowercase.
+
+```python
+object.proper()
+```
+
+Converts characters to propercase.
+
+```python
+object.upper()
+```
+
+Converts characters to uppercase.
+
+```python
+object.strip()
+```
+
+Removes leading and trailing whitespaces. Analogical to trim in Excel.
+
+```python
+object.replace(old, new)
+```
+
+Replaces old substring with a new substring.
+
+```python
+object.split(sub)
+```
+
+Splits a string based on the substring provided and converts it to a list.
+
+```python
+object.endswith(sub)
 ```
 
 Description
 
 ```python
-proper()
+object.startswith(sub)
 ```
 
 Description
 
 ```python
-upper()
+object.find(sub)
 ```
 
 Description
 
 ```python
-strip()
+object.rfind(sub)
 ```
 
 Description
 
 ```python
-replace()
-```
-
-Description
-
-```python
-split()
-```
-
-Description
-
-```python
-join()
+object.count(sub)
 ```
 
 Description
@@ -64,25 +88,25 @@ Description
 #### Methods for Lists
 
 ```python
-append()
+object.append()
 ```
 
 Description
 
 ```python
-remove()
+object.remove()
 ```
 
 Description
 
 ```python
-count()
+object.count()
 ```
 
 Description
 
 ```python
-clear()
+object.clear()
 ```
 
 Description
@@ -90,19 +114,19 @@ Description
 #### Methods for Dictionaries
 
 ```python
-keys()
+object.keys()
 ```
 
 Description
 
 ```python
-values()
+object.values()
 ```
 
 Description
 
 ```python
-clear()
+object.clear()
 ```
 
 Description
