@@ -179,7 +179,7 @@ my_surname_sentence2 = my_name_sentence.replace('name', 'surname').replace('Max'
 </details>
 <p>&nbsp;</p>
 
-4) Henry Ford once said <i>Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young</i>. Split this sentence by spaces. Call it 'split_sentence'. What is the type of this object?
+4) Henry Ford once said <i>"Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young."</i>. Split this sentence by spaces. Call it 'split_sentence'. What is the type of this object?
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
