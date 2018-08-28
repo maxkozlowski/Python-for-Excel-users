@@ -7,11 +7,19 @@ A Python method is like a function but it is embedded in the object and it works
 ```python
 # Upper method that works on a string object
 my_name = 'Max'
-my_name = my_name.upper()
-my_name
+my_name_upper = my_name.upper()
+my_name_upper
 ```
 
-As you can see in the example above, to call a method you first type the object you want to use it on and add the name of the method you want to call after a dot. 
+As you can see in the example above, to call a method you first type the object you want to use it on and add the name of the method you want to call after a dot. Sometimes you might want to use more then one methods on an object. You can use it either by using one method in each line of the code or by buiding a chain of methods in the same line.
+
+
+```python
+# Upper method that works on a string object
+my_name_spaces = ' Max '
+my_name_trimmed_upper = my_name.strip().upper()
+my_name_trimmed_upper
+```
 
 ## Useful methods
 
@@ -127,240 +135,97 @@ Return a new view of the dictionary’s values.
 
 ## Exercises
 
-1) Exercise 1
+1) Create a variable 'my_name' that contains your name. Based on this variable create 2 new variables: 'my_name_lower_case', 'my_name_upper_case'.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+my_name = 'Max'
+my_name_lower_case = my_name.lower()
+my_name_upper_case = my_name.upper()
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-2) Exercise 2
+2) Create a string that will start and end with a space. Create another, trimmed, version of this string.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+some_string = ' Text '
+some_string_trimmed = some_string.strip()
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-3) Exercise 3
+3) Create a variable that contains a string saying 'My name is ...'. Then replace the 'word' name with the word 'surname' and your name with your surname. Can you think of a way of transforming the string in only one line of code?
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+my_name_sentence = 'My name is Max'
+
+my_surname_sentence = my_name_sentence.replace('name', 'surname')
+my_surname_sentence = my_surname_sentence.replace('Max', 'Kozlowski')
+
+my_surname_sentence2 = my_name_sentence.replace('name', 'surname').replace('Max', 'Kozlowski')
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-4) Exercise 4
+4) Henry Ford once said 'Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young.'. Split this sentence by spaces. Call it 'split_sentence'. What is the type of this object?
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+sentence = 'Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young.'
+
+split_sentence = sentence.split(' ')
+type(split_sentence)
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-5) Exercise 5
+5) Try to count the number of occurrences of the word 'learning' in the sentence above. Do it in two ways: using the method count on the split_sentence list and manually looping through the list and counting the occurrences.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+split_sentence.count('learning')
+
+x=0
+for word in split_sentence:
+  if word == 'learning':
+    x+=1
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-6) Exercise 6
+6) Python often features as one of the most loved languages in the programming community. In the 2018 StackOverflow survey, almost 70% Python developers expressed an interest in continuing working in this language. The top 3 of the survey looks as follows. Translate the table below into a dictionary in Python. Having created the dictionary, get its values and keys using the appropriate methods.
+
+| Language  | Developers intersted in continuing developing in this language (%) |
+| ------------- | ------------- |
+| Rust  | 78.9  |
+| Kotlin  | 75.1 |
+| Python  | 68.0  |
+
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-7) Exercise 7
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-8) Exercise 8
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-9) Exercise 9
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-10) Exercise 10
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-11) Exercise 11
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-12) Exercise 12
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-13) Exercise 13
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-14) Exercise 14
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-15) Exercise 15
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-16) Exercise 16
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-17) Exercise 17
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-18) Exercise 18
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-19) Exercise 19
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-20) Exercise 20
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
+loved_programming_languages = {'Rust':78.9, 'Kotlin':75.1, 'Python':68.0}
+loved_programming_languages.keys()
+loved_programming_languages.values()
 ```
 
 </p>
