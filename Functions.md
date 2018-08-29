@@ -4,7 +4,7 @@ Do you rember print() and range() we used in the previous chapters? These are Py
 
 ## Useful functions
 
-Python ducomantation provides you with a list of built in functions. You are likely to work with some functions more often than with the others. There are a few commonly used Python functions.
+Python ducomantation provides you with a list of built in functions. You are likely to work with some functions more often than with the others. There are a few commonly used Python functions. To get a full view of Python built in functions, go to the [official Python website](https://docs.python.org/3/library/functions.html).
 
 ```python
 len()
@@ -17,6 +17,12 @@ print()
 ```
 
 Print objects to the text stream file, separated by sep and followed by end. sep, end, file and flush, if present, must be given as keyword arguments.
+
+```python
+range()
+```
+
+Return a sequence based on the arguments provided.
 
 ```python
 abs()
