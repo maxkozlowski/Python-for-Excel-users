@@ -116,7 +116,7 @@ def sum_2_arguments(a,b):
 
 # Check if the number is even
 def is_even(a):
-  return bool(a%2)
+  return not bool(a%2)
 ```
 
 Some arguments in your function can be optional and can assume some default values for them. This is useful when you expect that most of the times users will want an argument to be equal to a certain number but you want to provide the flexibility to change it.
@@ -151,12 +151,12 @@ When writing short and quick functions you may want to use lambda expression. Th
 ```python
 # Check if the number is even
 def is_even(a):
-  return bool(a%2)
+  return not bool(a%2)
   
 # Check if the number is even - the same function as the one above but expressed with lambda
-lambda a: a%2
+lambda a: not bool(a%2)
 # You can also assigna name to the function so that you can call it and check if it returns the same values
-is_even_lambda = lambda a: bool(a%2)
+is_even_lambda = lambda a: not bool(a%2)
 ```
 
 
