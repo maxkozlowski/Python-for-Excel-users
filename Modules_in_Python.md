@@ -51,12 +51,13 @@ While Pandas provides nice and analogical to Excel logic and structure of data, 
 
 ## Exercises
 
-1) Exercise 1
+1) Import Pandas module (as pd) and NumPy (as np).
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+import pandas as pd
+import numpy as np
 ```
 
 </p>
