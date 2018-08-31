@@ -63,3 +63,15 @@ import numpy as np
 </p>
 </details>
 <p>&nbsp;</p>
+
+2) Pandas proves to be very good at reading and saving Excel files. To do it you will use "read_excel" and "to_excel" functions, respectively. Try loading an Excel files using the appropriate function. Don't forget about stating "pd." at the beginning to let Python know that your function belongs to the Pandas module.
+<details><summary><i>Click to view the answer.</i></summary>
+<p>
+
+```python
+pd.read_excel("Excel_file.xslx")
+```
+
+</p>
+</details>
+<p>&nbsp;</p>
