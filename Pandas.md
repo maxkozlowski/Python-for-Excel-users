@@ -1,14 +1,28 @@
-# Methods
+# Pandas
+
+## Importing and exporting Excel files.
+
+#### Import
+
+```python
+pd.read_excel("file_path/ExcelFile.xlsx")
+```
+
+#### Export
+
+```python
+pd.read_excel("file_path/ExcelFile.xlsx")
+```
 
 ## Pandas data structures: Series and DataFrame.
+
+Pandas has two main data tructures: Series and DataFrame. A Series is a one-dimensional DataFrame (a DataFrame that contains only one column).
 
 ## Viewing and selecting data.
 
 ## Setting values.
 
 ## Working with data - basic operations.
-
-## Importing and exporting Excel files.
 
 ## Aggregating and merging DataFrames.
 
