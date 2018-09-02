@@ -24,7 +24,9 @@ Pandas has two main data tructures: Series and DataFrame. A Series is a one-dime
 
 ## Working with data - basic operations.
 
-## Aggregating and merging DataFrames.
+## Aggregating and melting DataFrames.
+
+## Merging and joining DataFrames.
 
 ## Exercises
 
