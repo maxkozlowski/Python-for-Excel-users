@@ -11,7 +11,7 @@ pd.read_excel("file_path/ExcelFile.xlsx")
 #### Export
 
 ```python
-pd.read_excel("file_path/ExcelFile.xlsx")
+pd.to_excel("file_path/ExcelFileFromPandas.xlsx")
 ```
 
 ## Pandas data structures: Series and DataFrame.
