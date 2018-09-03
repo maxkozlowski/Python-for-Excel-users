@@ -1,24 +1,67 @@
 # Pandas
 
-## Importing and exporting Excel files.
+Over the course of this chapter we will be working with the "Mobile_Sales_Data.xlsx" file. The first five rows of the file look as follows.
 
-#### Import
+| Date  | iPhone | Samsung | Huawei |
+| ------------- | ------------- | ------------- | ------------- |
+| x  | x  | x  | x  |
+| x  | x  | x  | x  |
+| x  | x  | x  | x  |
+| x  | x  | x  | x  |
+| x  | x  | x  | x  |
+
+## Importing Excel files.
+
+Importing Excel files is actually very easy and done with just one line of code.
 
 ```python
 pd.read_excel("file_path/ExcelFile.xlsx")
 ```
 
-#### Export
+Now that you know how to do it, go ahead and load in the "Mobile_Sales_Data.xlsx" file. Let's assign it to an object called "sales_data_table".
 
 ```python
-pd.to_excel("file_path/ExcelFileFromPandas.xlsx")
+sales_data_table = pd.read_excel("file_path/Mobile_Sales_Data.xlsx")
 ```
 
 ## Pandas data structures: Series and DataFrame.
 
 Pandas has two main data tructures: Series and DataFrame. A Series is a one-dimensional DataFrame (a DataFrame that contains only one column).
 
-## Viewing and selecting data.
+## Viewing data.
+
+When you want to view your table you can either just type in the name of your table, or use head or tail method.
+
+```python
+# View the table
+sales_data_table
+
+# View the head of the table. By default you will see first 5 rows. If you want to see n rows, type "head(n)"
+sales_data_table.head()
+sales_data_table.head(10)
+
+
+# View the tail of the table. By default you will see last 5 rows. If you want to see n rows, type "tail(n)"
+sales_data_table.tail()
+sales_data_table.tail(10)
+```
+
+## Selecting data.
+
+To select a single column (it will yield a Pandas Series), you need to type the name of your table and then in square brackets and quotation marks the name of the column.
+
+```python
+sales_data_table["iPhone"]
+```
+You can also select specific rows by calling index of the table.
+
+```python
+sales_data_table[3:6]
+```
+
+#### loc
+
+#### iloc
 
 ## Setting values.
 
@@ -27,6 +70,12 @@ Pandas has two main data tructures: Series and DataFrame. A Series is a one-dime
 ## Aggregating and melting DataFrames.
 
 ## Merging and joining DataFrames.
+
+## Exporting Pandas DataFrames into Excel formats.
+
+```python
+pd.to_excel("file_path/ExcelFileFromPandas.xlsx")
+```
 
 ## Exercises
 
