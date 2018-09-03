@@ -30,7 +30,7 @@ You will have seen operators in Excel already. When doing calculations in Excel,
 | arithmetic  | /  | 9 / 3 (outcome: 3) | division |
 | arithmetic  | **  | 2 ** 3 (outcome: 8) | power calculation |
 | arithmetic  | //  | 9 // 2 (outcome: 4) | floor division |
-| arithmetic  | %  | 9 % 2 (outcome: 1) | modulus |
+| arithmetic  | %  | 9 % 2 (outcome: 1) | modulo |
 | assignment  | =  | x = 10 | x = 10 |
 | assignment  | +=  | x += 10 | x = x + 10 |
 | assignment  | -=  | x-=10 | x = x - 10 |
