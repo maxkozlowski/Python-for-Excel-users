@@ -34,7 +34,7 @@ object.lower()
 Converts characters to lowercase.
 
 ```python
-object.proper()
+object.title()
 ```
 
 Converts characters to propercase.
