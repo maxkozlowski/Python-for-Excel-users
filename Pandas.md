@@ -161,9 +161,40 @@ Creating a new column in a Pandas DataFrame is very quick and easy. Just type in
 
 ```python
 churn_data_table['New Column'] = 'New Values'
+churn_data_table['Count'] = 1
+```
+
+You can also create new columns that and based their valus on already existing columns.
+
+```python
+churn_data_table['Tenure in years'] = churn_data_table['tenure']/12
 ```
 
 ## Aggregating and melting DataFrames.
+
+#### pivot_table
+
+Surely you have used pivot tables in Excel many times. Pandas has the pivot_table function that does the same job.
+
+```python
+pd.pivot_table(churn_data_table, values='Count', index=['gender', 'Contract','PaymentMethod'], columns='Churn', aggfunc=np.sum)
+```
+
+As you can see, you wil get multi-level indexes by default. We can deal with it using the reset_index method.
+
+```python
+pd.pivot_table(churn_data_table, values='Count', index=['gender', 'Contract','PaymentMethod'], columns='Churn', aggfunc=np.sum).reset_index()
+
+pivot_table_churn = pd.pivot_table(churn_data_table, values='Count', index=['gender', 'Contract','PaymentMethod'], columns='Churn', aggfunc=np.sum).reset_index()
+```
+
+#### melt
+
+Melting does the opposite to pivot_table.
+
+```python
+pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_vars=, value_name='Count'
+```
 
 ## Merging and joining DataFrames.
 
