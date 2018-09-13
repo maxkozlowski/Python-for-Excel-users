@@ -7,7 +7,7 @@ Over the course of this chapter we will be working with the "Telco_Customer_Chur
 Importing Excel files is actually very easy and done with just one line of code.
 
 ```python
-pd.read_excel(r"file_path/Telco_Customer_Churn.xlsx")
+pd.read_excel(r"file_path/Telco Customer Churn.xlsx")
 ```
 
 Now that you know how to do it, go ahead and load in the "Mobile_Sales_Data.xlsx" file. Let's assign it to an object called "sales_data_table".
@@ -38,7 +38,7 @@ churn_data_table.tail()
 churn_data_table.tail(10)
 ```
 
-## Selecting data.
+## Selecting and understanding the data.
 
 To select a single column (it will yield a Pandas Series), you need to type the name of your table and then in square brackets and quotation marks the name of the column.
 
@@ -50,6 +50,20 @@ Sometimes you may want to see the unique values in a column. You can do it with 
 
 ```python
 churn_data_table["InternetService"].unique()
+```
+
+It will also be useful to check what are the data types within your table (each column can be of different data type). The dtypes method comes handy in this case.
+
+```python
+churn_data_table.dtypes
+```
+
+When you want to get to know some numeric variable, you might want to use sum, mean or count methods.
+
+```python
+churn_data_table['MonthlyCharges'].sum()
+churn_data_table['MonthlyCharges'].mean()
+churn_data_table['MonthlyCharges'].count()
 ```
 
 You can also select specific rows by calling index of the table.
@@ -145,14 +159,31 @@ churn_data_table.loc[0]
 churn_data_table.loc[0:5]
 ```
 
+You can use loc in another, more useful way. For index label, instead of manually typing the numbers of rows you want choose, you can input an object that will contain the indexes you are after.
+
+```python
+# Select all columns, only in cases where gender is Female
+churn_data_table.loc[churn_data_table['gender']=='Female',:]
+
+# Select the first four columns, only in cases where InternetService is DSL
+churn_data_table.loc[churn_data_table['InternetService']=='DSL',['customerID','gender','SeniorCitizen','Partner']]
+```
+
+Using the loc method in this way looks very similar to how we were selecting data at the begginning of this section. However, when you want to overwrite some values, the best way to do it is through using the loc method.
+
 ## Setting values.
 
 If you want to change or update the values in your table, you can use the iloc or loc method and just assign some new value to the cell(s) you indent to update.
 
 ```python
+# Change a specific cell
 churn_data_table.loc[1, 'gender'] = 'Female'
 
+# Change a specific cell
 churn_data_table.loc[:,'PhoneService'] = 'Yes'
+
+# Change a range of cells in a specific column
+churn_data_table.loc[churn_data_table['PaymentMethod']=='Electronic check','MonthlyCharges'] = churn_data_table.loc[churn_data_table['PaymentMethod']=='Electronic check','MonthlyCharges']*1.2
 ```
 
 ## Working with data - basic operations.
@@ -170,6 +201,14 @@ You can also create new columns that and based their valus on already existing c
 churn_data_table['Tenure in years'] = churn_data_table['tenure']/12
 ```
 
+Let's also use what we have learned about loc and setting the values to modify the Churn column- instead Yes and No, we would rather have True and False or 0 and 1.
+
+```python
+# Change Yes and No into 0 and 1
+churn_data_table.loc[churn_data_table['Churn']=='Yes','Churn'] = 1
+churn_data_table.loc[churn_data_table['Churn']=='No','Churn'] = 0
+```
+
 ## Aggregating and melting DataFrames.
 
 #### pivot_table
@@ -177,31 +216,84 @@ churn_data_table['Tenure in years'] = churn_data_table['tenure']/12
 Surely you have used pivot tables in Excel many times. Pandas has the pivot_table function that does the same job.
 
 ```python
-pd.pivot_table(churn_data_table, values='Count', index=['gender', 'Contract','PaymentMethod'], columns='Churn', aggfunc=np.sum)
+pd.pivot_table(churn_data_table, values='Churn', index=['gender', 'Contract','PaymentMethod'], columns='InternetService', aggfunc=np.sum)
 ```
 
 As you can see, you wil get multi-level indexes by default. We can deal with it using the reset_index method.
 
 ```python
-pd.pivot_table(churn_data_table, values='Count', index=['gender', 'Contract','PaymentMethod'], columns='Churn', aggfunc=np.sum).reset_index()
+pd.pivot_table(churn_data_table, values='Churn', index=['gender', 'Contract','PaymentMethod'], columns='InternetService', aggfunc=np.sum).reset_index()
 
-pivot_table_churn = pd.pivot_table(churn_data_table, values='Count', index=['gender', 'Contract','PaymentMethod'], columns='Churn', aggfunc=np.sum).reset_index()
+pivot_table_churn = pd.pivot_table(churn_data_table, values='Churn', index=['gender', 'Contract','PaymentMethod'], columns='InternetService', aggfunc=np.sum).reset_index()
 ```
+
+Multi-levels for indexes are fine, as we can easily deal with them (as shown above). It is not recommended however to use multi-levels for columns- using this table for some further processing will become more difficult.
 
 #### melt
 
-Melting does the opposite to pivot_table.
+Melt does the opposite to pivot_table, it breaks down and disaggregates the table.
 
 ```python
-pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_vars=, value_name='Count'
+pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_name='Churn')
+
+melted table = pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_name='Churn')
 ```
 
 ## Merging and joining DataFrames.
 
-## Exporting Pandas DataFrames into Excel formats.
+You will usually use either append, merge or concat when merging and joining tables.
+
+#### concat
+
+The method concat comes in handy when you want to join 2 or more tables of the same structure (same columns), one below the other. Imagine you have a few weekly reports that are in the same format and you want to bring them into one object.
 
 ```python
-pd.to_excel("file_path/ExcelFileFromPandas.xlsx")
+# Load in the two tables to concat
+table_1 = pd.read_excel(r"file_path/Telco Customer Churn.xlsx")
+table_2 = pd.read_excel(r"file_path/Telco Customer Churn_part_2.xlsx")
+
+# Concat the 2 tables - the argument is a list of objects you want to concatenate.
+pd.concat([table_1,table_2])
+```
+Concat will work well as long as the structure of your reports is the same. If the structure differs slightly, use the function append.
+
+#### append
+
+The append function is realy useful when you expect that the sructure of your reports may differ or columns may be in different order. It will however work perfectly fine if the structure is the same too. Therefore you can use this method by default.
+
+
+```python
+# Append together the 2 tables - the argument is a list of objects you want to concatenate
+table_1.append(table_2)
+
+# Add a column into table_2
+table_2['New Column']='Some Values'
+
+# Append again the 2 tables
+table_1.append(table_2)
+
+# Create table 3 based on table 1 and add a column
+table_3 = table_1
+table_3['New Value'] = 1
+
+# Append 3 tables together
+table_1.append([table_2,table_3])
+```
+
+#### merge
+
+Merge is used to join together tables that share one or more common column. It can be used analogically to Excel lookups.
+
+```python
+code
+```
+
+## Exporting Pandas DataFrames into Excel formats.
+
+To export your DataFrame into an Excel file, use the method to_excel.
+
+```python
+churn_data_table.to_excel("file_path/ExcelFileFromPandas.xlsx")
 ```
 
 ## Exercises
