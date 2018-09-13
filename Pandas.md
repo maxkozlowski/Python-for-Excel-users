@@ -2,6 +2,13 @@
 
 Over the course of this chapter we will be working with the "Telco_Customer_Churn.xlsx" file. You can see more info about this dataset on [Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn).
 
+Before starting typing your code, make sure you import both Pandas and NumPy.
+
+```python
+import pandas as pd
+import numpy as np
+```
+
 ## Importing Excel files.
 
 Importing Excel files is actually very easy and done with just one line of code.
