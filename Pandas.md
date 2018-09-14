@@ -71,12 +71,35 @@ If you want to look at the list of columns, use the columns method.
 churn_data_table.columns
 ```
 
-When you want to get to know some numeric variable, you might want to use sum, mean or count methods.
+When you want to get to know some numeric variable, you might want to use sum, mean, count or other methods.
 
 ```python
 churn_data_table['MonthlyCharges'].sum()
 churn_data_table['MonthlyCharges'].mean()
+churn_data_table['MonthlyCharges'].median()
+churn_data_table['MonthlyCharges'].std()
+churn_data_table['MonthlyCharges'].max()
+churn_data_table['MonthlyCharges'].mean()
 churn_data_table['MonthlyCharges'].count()
+```
+
+You can do the above using just one method- describe.
+
+```python
+churn_data_table['MonthlyCharges'].describe()
+```
+
+Sometimes it will be importanty to check whether you have missing values in your column. You can do it using the isnull method and chaining either any or sum methods on top.
+
+```python
+# Get a series of True and False values
+churn_data_table['MonthlyCharges'].isnull()
+
+# Check whether there is at least one missing value
+churn_data_table['MonthlyCharges'].isnull().any()
+
+# Check how many missing values there are in your dataframe
+churn_data_table['MonthlyCharges'].isnull().sum()
 ```
 
 You can also select specific rows by calling index of the table.
@@ -214,7 +237,7 @@ You can also create new columns that and based their valus on already existing c
 churn_data_table['Tenure in years'] = churn_data_table['tenure']/12
 ```
 
-You can also use other operations on your columns, such as +, -, *, % etc.
+As you surely expect, you can use other operations on your columns, such as +, -, *, % etc.
 
 Let's also use what we have learned about loc and setting the values to modify the Churn column- instead Yes and No, we would rather have True and False or 0 and 1.
 
@@ -360,163 +383,189 @@ churn_data_table.to_csv("file_path/ExcelFileFromPandas.csv", index=False)
 
 ## Exercises
 
-1) Exercise 1
+1) Load in Los Angeles Metro Bike Share Trip Data. The file is named "Metro bike share trip data.xlsx". Assign it to the object "bike_share_data".
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data = pd.read_excel(r"your_path\Metro bike share trip data.xlsx")
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-2) Exercise 2
+2) Try to get to know the data a little. View the table using just its name as well as head and tail methods.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data
+bike_share_data.head(40)
+bike_share_data.tail(40)
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-3) Exercise 3
+3) Look through your datatypes and look at the list of the columns you have.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data.dtypes
+bike_share_data.columns
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-4) Exercise 4
+4) Try to understand what are the unique values in the "Tripl Roure Category" and "Passholder Type" columns.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data["Tripl Roure Category"].unique()
+bike_share_data["Passholder Type"].unique()
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-5) Exercise 5
+5) Explore the "Duration" column- what's the mean, median and std? Are there any missing values?
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data["Duration"].describe()
+
+bike_share_data["Duration"].isnull().any()
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-6) Exercise 6
+6) Renting bikes costs $2 fixed fee plus $0.04 for every minute. Create the new column "Cost" that will represent how much money was spent for each journey.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+# Standard way
+bike_share_data["Cost"] = 2 + 0.04*bike_share_data["Duration"]/60
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-7) Exercise 7
+7) You realised that customers who used their bikes for more than 2 hours pay only $0.03 per every additional minute. Overwrite your cost column with the correct value. In this case you may need to use apply and define the appropriate function- either using lambda or in through a standard function definition.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+# Standard function definition
+def cost(x):
+    if x<=7200:
+        return 2 + 0.04*x/60
+    else:
+        return 2 + (0.04*7200/60) + (0.03*(x-7200)/60)
+        
+bike_share_data["Cost"] = bike_share_data["Duration"].apply(cost)
+
+# Lambda
+bike_share_data["Cost"] = bike_share_data["Duration"].apply(lambda x: 2 + 0.04*x/60 if x<=7200 else 2 + (0.04*7200/60) + (0.03*(x-7200)/60))
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-8) Exercise 8
+8) You realised that the trips with ID 1933383, 1944062 and 1944055	have "Passholder Type" categorised as "Flex Pass", while they actually should be "Monthly Pass". Try to change it.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data.loc
+bike_share_data.loc[bike_share_data['Trip ID']==1933383,'Passholder Type'] = "Monthly Pass"
+bike_share_data.loc[bike_share_data['Trip ID']==1944062,'Passholder Type'] = "Monthly Pass"
+bike_share_data.loc[bike_share_data['Trip ID']==1944055,'Passholder Type'] = "Monthly Pass"
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-9) Exercise 9
+9) Imagine that you have been provided with a list of a hundred ID's that were wrongly classified as "Flex Pass" instead of "Monthly Pass". Can you think of a way of approaching it in a quick way? Could for loop and iterating over this list come in handy? Try using it on the following IDs: 	1944043, 1944042, 1947929, 1947921, 1947917, 1951891, 23615299, 23615266, 23619203, 23635424, 23635407.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+list_of_IDs = [1944043, 1944042, 1947929, 1947921, 1947917, 1951891, 23615299, 23615266, 23619203, 23635424, 23635407]
+
+for id in list_of_IDs:
+    bike_share_data.loc[bike_share_data['Trip ID']==id,'Passholder Type'] = "Monthly Pass"
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-10) Exercise 10
+10) Let's try to aggregate amount spend at daily level (based on Start Time column). Check again dtypes and try to understand if the Start Time is in the correct format.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data.dtypes
+
+# The above suggests that Python sees the Start Time column as an object and not as a date
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-11) Exercise 11
+11) Pandas has a function to_datetime that allows you to transform your column into date time. Use it to update the "Start Time" column. Check again your data types.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data['Start Time'] = pd.to_datetime(bike_share_data['Start Time'])
+bike_share_data.dtypes
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-12) Exercise 12
+12) Create a new column named "Start Date" where you get rid of hours and minutes as we want to get a daily view. This can be done with dt.date method.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data['Start Date'] = bike_share_data['Start Time'].dt.date
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-13) Exercise 13
+13) Aggregate your cost data with dates going down the side and Passholder Type across the top. Assign it to a new object named bike_share_data_agg. Use 0s to fill blank values. Make sure you reset the index.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data_agg = pd.pivot_table(bike_share_data, values='Cost', index='Start Date', columns='Passholder Type', aggfunc=np.sum, fill_value=0).reset_index()
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-14) Exercise 14
+14) Melt the bike_share_data_agg so that you have Passholder Type back as a column. Assign it to the object bike_share_data_melted.
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
