@@ -243,7 +243,7 @@ Melt does the opposite to pivot_table, it breaks down and disaggregates the tabl
 ```python
 pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_name='Churn')
 
-melted table = pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_name='Churn')
+melted_table = pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_name='Churn')
 ```
 
 In fact, this (melted) structure of data proves to be a very efficient structure that allows you processing your data in a quick and easy way. We will cover this in more detail in the next chapter.
