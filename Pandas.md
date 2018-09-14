@@ -246,6 +246,8 @@ pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value
 melted table = pd.melt(pivot_table_churn, id_vars=['gender', 'Contract','PaymentMethod'], value_name='Churn')
 ```
 
+In fact, this (melted) structure of data proves to be a very efficient structure that allows you processing your data in a quick and easy way. We will cover this in more detail in the next chapter.
+
 ## Merging and joining DataFrames.
 
 You will usually use either append, merge or concat when merging and joining tables.
