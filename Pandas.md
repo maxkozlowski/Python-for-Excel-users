@@ -180,7 +180,7 @@ Using the loc method in this way looks very similar to how we were selecting dat
 
 ## Setting values.
 
-If you want to change or update the values in your table, you can use the iloc or loc method and just assign some new value to the cell(s) you indent to update.
+Changing or updating some values in table is usually done with the loc method.
 
 ```python
 # Change a specific cell
