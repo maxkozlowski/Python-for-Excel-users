@@ -214,12 +214,40 @@ You can also create new columns that and based their valus on already existing c
 churn_data_table['Tenure in years'] = churn_data_table['tenure']/12
 ```
 
+You can also use other operations on your columns, such as +, -, *, % etc.
+
 Let's also use what we have learned about loc and setting the values to modify the Churn column- instead Yes and No, we would rather have True and False or 0 and 1.
 
 ```python
 # Change Yes and No into 0 and 1
 churn_data_table.loc[churn_data_table['Churn']=='Yes','Churn'] = 1
 churn_data_table.loc[churn_data_table['Churn']=='No','Churn'] = 0
+```
+
+#### apply
+
+Pandas contains a handy method apply- it allows you to apply a function along input axis of DataFrame. Apply proves to be particularly useful when you want to make some specific transformation to one of your columns.
+
+```python
+# Define functions that split customers into 2 segments (based on tenure)
+def tenure_segments(x):
+    if x > 36:
+        return "Over 3 years"
+    else:
+        return "Up to 3 years"
+
+# Apply the defined function along the tenure column
+churn_data_table["tenure"].apply(tenure_segments)
+
+# Create a new column named "Tenure Segment"
+churn_data_table["Tenure Segment"] = churn_data_table["tenure"].apply(tenure_segments)
+```
+
+If you want to make your code shorter and quicker to write, you can define your function using lambda within the apply method.
+
+```python
+# Create a new column named "Tenure Segment Lambda"
+churn_data_table["Tenure Segment Lambda"] = churn_data_table["tenure"].apply(lambda x: "Over 3 years" if x>36 else "Up to 3 years")
 ```
 
 ## Aggregating and melting DataFrames.
