@@ -65,6 +65,12 @@ It will also be useful to check what are the data types within your table (each 
 churn_data_table.dtypes
 ```
 
+If you want to look at the list of columns, use the columns method.
+
+```python
+churn_data_table.columns
+```
+
 When you want to get to know some numeric variable, you might want to use sum, mean or count methods.
 
 ```python
@@ -294,7 +300,18 @@ table_1.append([table_2,table_3])
 Merge is used to join together tables that share one or more common column. It can be used analogically to Excel lookups.
 
 ```python
-code
+# Load in 2 lookup tables
+regions = pd.read_excel(r"file_path/Telco_Customer_Churn - Regions.xlsx")
+free_bb_upgrades = pd.read_excel(r"file_path/Telco_Customer_Churn - Free BB Upgrade.xlsx")
+
+# Lookup on the regions table
+churn_data_table.merge(regions, how='left', on='customerID')
+
+# Overwrite the churn_data_table with the new merged tables
+churn_data_table = churn_data_table.merge(regions, how='left', on='customerID')
+
+# Lookup on the upgrades table and overwrite the old table
+churn_data_table = churn_data_table.merge(free_bb_upgrades, how='left', on=['InternetService','PaperlessBilling','Region'])
 ```
 
 ## Exporting Pandas DataFrames into Excel formats.
@@ -303,6 +320,14 @@ To export your DataFrame into an Excel file, use the method to_excel.
 
 ```python
 churn_data_table.to_excel("file_path/ExcelFileFromPandas.xlsx")
+
+churn_data_table.to_excel("file_path/ExcelFileFromPandas.xlsx", index=False)
+```
+
+You can also export your DataFrame to csv.
+
+```python
+churn_data_table.to_csv("file_path/ExcelFileFromPandas.csv", index=False)
 ```
 
 ## Exercises
