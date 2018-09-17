@@ -570,81 +570,18 @@ bike_share_data_agg = pd.pivot_table(bike_share_data, values='Cost', index='Star
 <p>
 
 ```python
-code
+bike_share_data_melted = pd.melt(bike_share_data_agg, id_vars='Start Date', var_name='Passholder', value_name='Cost')
 ```
 
 </p>
 </details>
 <p>&nbsp;</p>
 
-15) Exercise 15
+15) Save off as an Excel files the 2 tables you have created: bike_share_data_agg and bike_share_data_melted
 <details><summary><i>Click to view the answer.</i></summary>
 <p>
 
 ```python
-code
+bike_share_data_agg.to_excel(r"file_path/FileName.xlsx")
+bike_share_data_melted.to_excel(r"file_path/FileName2.xlsx")
 ```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-16) Exercise 16
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-17) Exercise 17
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-18) Exercise 18
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-19) Exercise 19
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
-
-20) Exercise 20
-<details><summary><i>Click to view the answer.</i></summary>
-<p>
-
-```python
-code
-```
-
-</p>
-</details>
-<p>&nbsp;</p>
