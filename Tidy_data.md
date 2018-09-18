@@ -19,7 +19,7 @@ From [Hadley Wickham's Tidy Data Paper](http://vita.had.co.nz/papers/tidy-data.h
 
 Let's imagine we have weekly sales data for 2 products (Basic and Premium).
 
-<i>Table 1</i>
+Weeks down the side and products across the top.
 
 |   | Basic | Premium |
 | ------------- | ------------- | ------------- |
@@ -27,14 +27,14 @@ Let's imagine we have weekly sales data for 2 products (Basic and Premium).
 | Week 2  | 225  | 51  |
 | Week 3  | 180  | 44  |
 
-<i>Table 2</i>
+Products down the side and weeks across the top.
 
 |   | Week 1 | Week 2 | Week 3 |
 | ------------- | ------------- | ------------- | ------------- |
 | Basic  | 167  | 225  | 180  |
 | Premium  | 42  | 51  | 44  |
 
-There are multiple ways to represent the same dataset. Table 1 and Table 1 contain exactly the same data, though they are structured in a different way. You may already expect that keeping data in a variety of structures will cause problems with joining tables as well as will force you to adjust your data processes to the specific structure of your data i.e. your ability to use codes built in the past will be limited.
+There are multiple ways to represent the same dataset. Both tables contain exactly the same data, though they are structured in a different way. You may already expect that keeping data in a variety of structures will cause problems with joining tables as well as will force you to adjust your data processes to the specific structure of your data i.e. your ability to use codes built in the past will be limited.
 
 ## Principles of Tidy data.
 
@@ -48,6 +48,19 @@ We can summarize the charasteristics of data poinst into the following points. T
 <i>2. Each different observation of that variable should be in a different row.</i><p>
 <i>3. There should be one table for each "kind" of variable.</i><p>
 <i>4. If you have multiple tables, they should include a column in the table that allows them to be linked.</i><p>
+
+Now that we know what structure we should form whenever working with data, let's try to reshape the sales data into a tidy format.
+
+Tidy data format - weeks and product down the side, sales data in one separate column
+
+|   | Product | Sales |
+| ------------- | ------------- | ------------- |
+| Week 1  | Basic  | 167  |
+| Week 2  | Basic  | 225  |
+| Week 3  | Basic  | 180  |
+| Week 1  | Premium  | 42  |
+| Week 2  | Premium  | 51  |
+| Week 3  | Premium  | 44  |
 
 ## Exercises
 
