@@ -1,5 +1,18 @@
 # Tidy data
 
+Tidy data is a foundation of data processing using Pandas. Having your dataset in a tidy structure will make your work easier, quicker and more error-prone.
+
+From [Hadley Wickham's Tidy Data Paper](http://vita.had.co.nz/papers/tidy-data.html)
+
+>A huge amount of effort is spent cleaning data to get it ready for analysis, but there has been little research on how to make data cleaning as easy and effective as possible. This paper tackles a small, but important, component of data cleaning: data tidying.
+Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table.
+
+>It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu and Johnson 2003). Data preparation is not just a first step, but must be repeated many times over the course of analysis as new problems come to light or new data is collected. 
+
+>The principles of tidy data provide a standard way to organize data values within a dataset. A standard makes initial data cleaning easier because you do not need to start from scratch and reinvent the wheel every time. The tidy data standard has been designed to facilitate initial exploration and analysis of the data, and to simplify the development of data analysis tools that work well together.
+
+## Defining Tidy Data.
+
 ## Principles of Tidy data.
 
 ## Exercises
