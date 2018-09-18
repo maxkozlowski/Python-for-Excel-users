@@ -13,6 +13,29 @@ Tidy datasets are easy to manipulate, model and visualize, and have a specific s
 
 ## Defining Tidy Data.
 
+From [Hadley Wickham's Tidy Data Paper](http://vita.had.co.nz/papers/tidy-data.html)
+
+> Like families, tidy datasets are all alike but every messy dataset is messy in its own way. Tidy datasets provide a standardized way to link the structure of a dataset (its physical layout) with its semantics (its meaning).
+
+Let's imagine we have weekly sales data for 2 products (Basic and Premium).
+
+<i>Table 1</i>
+
+|   | Basic | Premium |
+| ------------- | ------------- | ------------- |
+| Week 1  | 167  | 42  |
+| Week 2  | 225  | 51  |
+| Week 3  | 180  | 44  |
+
+<i>Table 2</i>
+
+|   | Week 1 | Week 2 | Week 3 |
+| ------------- | ------------- | ------------- | ------------- |
+| Basic  | 167  | 225  | 180  |
+| Premium  | 42  | 51  | 44  |
+
+There are multiple ways to represent the same dataset. Table 1 and Table 1 contain exactly the same data, though they are structured in a different way. You may already expect that keeping data in a variety of structures will cause problems with joining tables as well as will force you to adjust your data processes to the specific structure of your data i.e. your ability to use codes built in the past will be limited.
+
 ## Principles of Tidy data.
 
 ## Exercises
