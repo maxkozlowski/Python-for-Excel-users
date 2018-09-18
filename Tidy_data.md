@@ -38,6 +38,17 @@ There are multiple ways to represent the same dataset. Table 1 and Table 1 conta
 
 ## Principles of Tidy data.
 
+From [Hadley Wickham's Tidy Data Paper](http://vita.had.co.nz/papers/tidy-data.html)
+
+> A dataset is a collection of values, usually either numbers (if quantitative) or strings (if qualitative). Values are organized in two ways. Every value belongs to a variable and an observation. A variable contains all values that measure the same underlying attribute (like height, temperature, duration) across units. An observation contains all values measured on the same unit (like a person, or a day, or a race) across attributes.
+
+We can summarize the charasteristics of data poinst into the following points. Try to follow them whenever you come to work with data in Python and Pandas.
+
+<i>1. Each variable you measure should be in one column.</i><p>
+<i>2. Each different observation of that variable should be in a different row.</i><p>
+<i>3. There should be one table for each "kind" of variable.</i><p>
+<i>4. If you have multiple tables, they should include a column in the table that allows them to be linked.</i><p>
+
 ## Exercises
 
 1) Exercise 1
