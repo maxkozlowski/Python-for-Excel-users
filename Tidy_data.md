@@ -42,7 +42,7 @@ From [Hadley Wickham's Tidy Data Paper](http://vita.had.co.nz/papers/tidy-data.h
 
 > A dataset is a collection of values, usually either numbers (if quantitative) or strings (if qualitative). Values are organized in two ways. Every value belongs to a variable and an observation. A variable contains all values that measure the same underlying attribute (like height, temperature, duration) across units. An observation contains all values measured on the same unit (like a person, or a day, or a race) across attributes.
 
-We can summarize the charasteristics of data poinst into the following points. Try to follow them whenever you come to work with data in Python and Pandas.
+We can summarize the charasteristics of tidy data into the following points. Try to follow them whenever you come to work with data in Python and Pandas.
 
 <b><i>1. Each variable you measure should be in one column.</i></b><p>
 <b><i>2. Each different observation of that variable should be in a different row.</i></b><p>
