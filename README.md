@@ -36,4 +36,4 @@ For further learning go to Python Learning Sources.
   - Aggregating and merging DataFrames.
 - [Tidy data](./Tidy_data.md)
   - Principles of tidy data.
-- [Excel functions demonstraded in Python](./Excel_functions_demonstrated_in_Python.md)
+- [Excel functions demonstraded in Python](./Excel_functions_in_Python.md)
