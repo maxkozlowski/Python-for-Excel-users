@@ -1,5 +1,10 @@
 # Pandas
 
+When working with Pandas, you might find useful the following links:
+- [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+- [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html)
+- [Pandas documentation](http://pandas.pydata.org/pandas-docs/stable/)
+
 Over the course of this chapter we will be working with the "Telco_Customer_Churn.xlsx" file. You can see more info about this dataset on [Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn).
 
 Before starting typing your code, make sure you import both Pandas and NumPy.
