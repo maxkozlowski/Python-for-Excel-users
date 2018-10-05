@@ -10,7 +10,7 @@ import numpy as np
 Load the Customer Churn data we used in the Pandas chapter. Name it "churn_data_table".
 
 ```python
-churn_data_table = pd.read_excel(r"M:\MMM\Python\Learning\Python Training Aug-Oct 18\Files\Telco Customer Churn.xlsx")
+churn_data_table = pd.read_excel(r"file_path/Telco Customer Churn.xlsx")
 ```
 
 #### vlookup
@@ -18,7 +18,7 @@ churn_data_table = pd.read_excel(r"M:\MMM\Python\Learning\Python Training Aug-Oc
 Before we start, load one more table into your memory: "Telco Customer Churn - Customer name lookup.xlsx" and name it "lookup_table_customer_names". This table will contain customers' id's and their names.
 
 ```python
-lookup_table_customer_names = pd.read_excel(r"M:\MMM\Python\Learning\Python Training Aug-Oct 18\Files\Telco Customer Churn - Customer name lookup.xlsx")
+lookup_table_customer_names = pd.read_excel(r"file_path/Telco Customer Churn - Customer name lookup.xlsx")
 ```
 
 There is a few ways to perform a vlookup in Python.
@@ -81,7 +81,32 @@ churn_data_table['New Sum'].sum()
 
 #### if
 
+Very often when working with Excel you would use the 'if' function. This will make your function conditional based on some other value. Mirroring this logic in Python will be usually done using a bespoke function and the apply function.
+
+```python
+# Based on monthly charge, add a column "Package" that will tell wether a customer is on Basic or Premium Package
+def return_package(charge):
+  if charge <=60:
+    return "Basic"
+  else:
+    return "Premium"
+
+churn_data_table['Package'] = churn_data_table['MonthlyCharges'].apply(return_package)
+
+# We can also do it in one line using lambda
+churn_data_table['Package'] = churn_data_table['MonthlyCharges'].apply(lambda charge: "Basic" if charge<=60 else "Premium")
+```
+
+Using the same logic you can create much more complicated and powerful functions that will help you processing your data in the way you need.
+
 #### sumif
+
+When performing sumifs, you should only be doing them vertically. Provided you keep your data structure tidy, you will not have to do a horizontal sumif.
+
+```python
+# Sum all monthly charges if 'PaymentMethod' is 'Electronic check'
+churn_data_table.loc[churn_data_table['PaymentMethod']=='Electronic check','MonthlyCharges'].sum()
+```
 
 #### countif
 
