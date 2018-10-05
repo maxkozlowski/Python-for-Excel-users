@@ -63,6 +63,20 @@ lookup_table_customer_names['customerID']=lookup_table_customer_names['customerI
 
 #### sum
 
+Calculating sums in Python is very easy, though you have to approach differently horizontal and vertical sums.
+
+- Summing horizontally
+
+```python
+churn_data_table['New Sum'] = churn_data_table['MonthlyCharges'] + churn_data_table['TotalCharges'] 
+```
+
+- Summing vertically
+
+```python
+churn_data_table['New Sum'].sum()
+```
+
 #### max, min
 
 #### if
