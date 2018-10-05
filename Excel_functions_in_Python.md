@@ -110,6 +110,13 @@ churn_data_table.loc[churn_data_table['PaymentMethod']=='Electronic check','Mont
 
 #### countif
 
+Countif will be very similar to sumif - you only need to change the method you use to count.
+
+```python
+# Count rows if 'PaymentMethod' is 'Electronic check'
+churn_data_table.loc[churn_data_table['PaymentMethod']=='Electronic check','MonthlyCharges'].count()
+```
+
 #### and
 
 #### or
@@ -121,6 +128,19 @@ churn_data_table.loc[churn_data_table['PaymentMethod']=='Electronic check','Mont
 #### trim
 
 #### lower, upper, proper
+
+Use apply and one of the methods you need to amend the data.
+
+```python
+# lower
+churn_data_table['customerID']=churn_data_table['customerID'].apply(lambda x: x.lower())
+
+# upper
+churn_data_table['customerID']=churn_data_table['customerID'].apply(lambda x: x.upper())
+
+# proper/title
+churn_data_table['customerID']=churn_data_table['customerID'].apply(lambda x: x.title())
+```
 
 #### round
 
