@@ -48,6 +48,19 @@ churn_data_table['customer name'] = churn_data_table['customerID']
 churn_data_table['customer name'].replace(dictionary_lookup_table_customer_names, inplace=True)
 ```
 
+It is important to remember that Python, as opposed to Excel is case-sensitive. Also, sometimes you might have spaces at the beginning or at the end which are difficult to spot.
+It is a good habit to always lower cases and trim your columns on which you will be looking up.
+
+```python
+# Trim customerID column - both in date and lookup table
+churn_data_table['customerID']=churn_data_table['customerID'].str.strip()
+lookup_table_customer_names['customerID']=lookup_table_customer_names['customerID'].str.strip()
+
+# Lower cases - both in date and lookup table
+churn_data_table['customerID']=churn_data_table['customerID'].apply(lambda x: x.lower())
+lookup_table_customer_names['customerID']=lookup_table_customer_names['customerID'].apply(lambda x: x.lower())
+```
+
 #### sum
 
 #### max, min
