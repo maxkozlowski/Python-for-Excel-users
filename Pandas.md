@@ -258,17 +258,17 @@ Pandas contains a handy method apply- it allows you to apply a function along in
 
 ```python
 # Define functions that split customers into 2 segments (based on tenure)
-def tenure_segments(x):
+def tenure_function(x):
     if x > 36:
         return "Over 3 years"
     else:
         return "Up to 3 years"
 
 # Apply the defined function along the tenure column
-churn_data_table["tenure"].apply(tenure_segments)
+churn_data_table["tenure"].apply(tenure_function)
 
 # Create a new column named "Tenure Segment"
-churn_data_table["Tenure Segment"] = churn_data_table["tenure"].apply(tenure_segments)
+churn_data_table["Tenure Segment"] = churn_data_table["tenure"].apply(tenure_function)
 ```
 
 If you want to make your code shorter and quicker to write, you can define your function using lambda within the apply method.
@@ -473,13 +473,13 @@ bike_share_data["Cost"] = 2 + 0.04*bike_share_data["Duration"]/60
 
 ```python
 # Standard function definition
-def cost(x):
+def cost_function(x):
     if x<=7200:
         return 2 + 0.04*x/60
     else:
         return 2 + (0.04*7200/60) + (0.03*(x-7200)/60)
         
-bike_share_data["Cost"] = bike_share_data["Duration"].apply(cost)
+bike_share_data["Cost"] = bike_share_data["Duration"].apply(cost_function)
 
 # Lambda
 bike_share_data["Cost"] = bike_share_data["Duration"].apply(lambda x: 2 + 0.04*x/60 if x<=7200 else 2 + (0.04*7200/60) + (0.03*(x-7200)/60))
